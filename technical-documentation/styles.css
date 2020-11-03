@@ -102,6 +102,7 @@ header {
 
 .main-section {
   margin-top: 30px;
+  padding-right: 10px;
 }
 
 .main-section:first-of-type {
@@ -121,6 +122,7 @@ header {
 }
 
 code {
+  display: flex;
   margin-left: 10px;
   padding: 8px 10px;
   background-color: #e4e5e7;
@@ -133,6 +135,7 @@ code {
 .main-section a:visited,
 .main-section a:link {
   text-decoration: none;
+  color: #0000EE;
 }
 
 .main-section a:hover {
@@ -142,4 +145,46 @@ code {
 .main-section:last-of-type {
   margin-bottom: 30px;
 }
-/* TODO: @media and layout for mobile/tablet  */
+/* layout for tablet, narrower sidebar */
+@media only screen and (max-width: 815px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 180px;
+    border-right: 1px solid #afb0b6; /* light grey */
+  }
+  .main-doc {
+    position: absolute;
+    margin-left: 200px;
+    margin-right: 20px;
+  }
+}
+/* layout for mobile */
+@media only screen and (max-width: 560px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid #afb0b6; /* light grey */
+    z-index: 1;
+    background-color: #FFFFFF;
+  }
+  .navbar ul {
+    height: 100px;
+    border: 1px solid #afb0b6;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .main-doc {
+    position: absolute;
+    margin: 170px 20px 0 20px;
+  }
+  html {
+    scroll-padding-top: 170px;
+  }
+
+}
