@@ -151,7 +151,7 @@ footer p {
   margin: 5px;
 }
 
-@media screen and (min-width: 760px) {
+@media only screen and (min-width: 760px) {
   .projects-wrapper {
     display: flex;
     flex-direction: row;
